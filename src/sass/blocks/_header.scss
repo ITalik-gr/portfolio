@@ -1,0 +1,28 @@
+.nav {
+  padding: 28px 0 0 0;
+  &-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-logo {
+
+  }
+  &-list {
+    display: flex;
+    &__item {
+      margin-right: 60px;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  &-logo, .nav-list__item a {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    text-transform: lowercase;
+  }
+}
