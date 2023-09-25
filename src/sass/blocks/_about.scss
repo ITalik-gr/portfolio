@@ -1,0 +1,23 @@
+.about {
+  margin-bottom: 201px;
+  &-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-left {
+
+  }
+  &-right {
+    p {
+      max-width: 485px;
+    }
+  }
+  &-descr {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 110.5%; /* 26.52px */
+    letter-spacing: -0.6px;
+    text-transform: lowercase;
+  }
+}

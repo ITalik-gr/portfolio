@@ -1,0 +1,40 @@
+
+.line {
+  position: relative;
+  height: 52px;
+  &-text {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 82%;
+    letter-spacing: -1.6px;
+    text-transform: lowercase;
+    position: absolute;
+    width: 500vw;
+    left: -50px;
+    top: 0;
+
+    animation: scroll-text linear both;
+    animation-timeline: view(block);
+    animation-range: cover 0 cover 100;
+  } 
+}
+.case-line {
+  margin-bottom: 157px;
+}
+.cases-line {
+  margin-bottom: 120px;
+  .line-text {
+    left: -100px;
+  }
+}
+
+@keyframes scroll-text {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-10%);
+  }
+}
