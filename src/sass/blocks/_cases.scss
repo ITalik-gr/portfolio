@@ -26,6 +26,7 @@
     }
     &__type {
       color: rgba(255, 255, 255, 0.7);
+      width: 180px;
       font-size: 24px;
       font-weight: 500;
       line-height: normal;
@@ -33,7 +34,7 @@
       text-transform: lowercase;
       position: absolute;
       top: 0;
-      right: -80px;
+      right: -170px;
     }
   }
 }

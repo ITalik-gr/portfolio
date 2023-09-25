@@ -5,13 +5,6 @@
     justify-content: space-between;
     align-items: stretch;
   }
-  &__image {
-    padding-left: 68px;
-    img {
-      max-width: 617px;
-      width: 100%;
-    }
-  }
   &__text {
     display: flex;
     flex-direction: column;
@@ -56,5 +49,52 @@
     letter-spacing: -0.6px;
     text-decoration-line: underline;
     text-transform: lowercase;
+    &:hover {
+      color: #00FFA3;
+    }
+  }
+
+
+  &__image {
+    padding-left: 68px;
+    position: relative;
+    img {
+      max-width: 617px;
+      width: 100%;
+    }
+
+    &--hover {
+      width: calc(100% + 10px);
+      height: calc(100% + 10px);
+      background: rgba(0, 0, 0, 0.53);
+      backdrop-filter: blur(9.5px);
+      position: absolute;
+      top: -10px;
+      left: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: .3s all;
+      a {
+        color: #FFF;
+        font-size: 92px;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -2.3px;
+        text-decoration-line: underline;
+        text-transform: lowercase;
+      }
+    }
+
+    &:hover {
+      .main-case__image--hover {
+        opacity: 1; 
+      }
+
+      ~ .main-case__text .main-case__link {
+        color: #00FFA3; /* Змінити колір тексту посилання .main-case__link при hover на .main-case__image */
+      }
+    }
   }
 }
