@@ -1,15 +1,47 @@
 .about {
   margin-bottom: 201px;
+  @include Screen-992 {
+    margin-bottom: 94px;
+  }
+  @include Screen-576 {
+      margin-bottom: 84px;
+  }
   &-wrap {
     display: flex;
     justify-content: space-between;
+    @include Screen-992 {
+      flex-direction: column;
+    }
+  }
+  &_br {
+    @include Screen-992 {
+      display: none;
+    }
   }
   &-left {
-
+    @include Screen-992 {
+      margin-bottom: 98px;
+    }
   }
   &-right {
     p {
       max-width: 485px;
+    }
+  }
+  &-title {
+    display: none;
+    font-size: 28px;
+    color: #FFF;
+    font-weight: 500;
+    line-height: 110.5%; /* 30.94px */
+    letter-spacing: -0.7px;
+    text-transform: lowercase;
+    margin-bottom: 32px;
+    @include Screen-992 {
+      display: block;
+    }
+    @include Screen-576 {
+      font-size: 28px;
     }
   }
   &-descr {
@@ -19,5 +51,8 @@
     line-height: 110.5%; /* 26.52px */
     letter-spacing: -0.6px;
     text-transform: lowercase;
+    @include Screen-576 {
+      font-size: 16px;
+    }
   }
 }

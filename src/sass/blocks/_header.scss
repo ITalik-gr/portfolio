@@ -1,17 +1,29 @@
 .nav {
   padding: 28px 0 0 0;
+  @include Screen-576 {
+    padding: 16px 0 0 0;
+  }
   &-wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
+  &-logo {
+    @include Screen-576 {
+      max-width: 93px;
+      line-height: normal;
+    }
+  }
   &-logo, .nav-list__item a {
     color: #FFF;
     font-size: 20px;
     font-weight: 500;
     letter-spacing: -0.5px;
     text-transform: lowercase;
+    @include Screen-576 {
+      font-size: 16px;
+    }
   }
   &-list {
     display: flex;
@@ -24,6 +36,11 @@
           color: rgba(255, 255, 255, 0.793);
         }
       }
+      &:first-child {
+        @include Screen-576 {
+          display: none;
+        }
+      }
       &:last-child {
         margin: 0;
       }
@@ -33,23 +50,44 @@
 
 }
 .header {
-  margin: 340px 0 0 0;
-  margin-bottom: 297px;
+  margin: 340px 0 297px 0;
+  @include Screen-1200 {
+    margin: 240px 0 250px 0;
+  }
+  @include Screen-992 {
+    margin: 240px 0 150px 0;
+  }
+  @include Screen-576 {
+    margin: 120px 0 38px 0;
+  }
   &-wrap {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     padding-bottom: 55px;
+    @include Screen-992 {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    @include Screen-576 {
+      padding-bottom: 32px;
+    }
   }
   &-block {
     position: relative;
   }
   &-memoji {
     position: absolute;
-    right: 0;
+    right: -40px;
     top: -150px;
     border-radius: 120px;
+    @include Screen-576 {
+      position: relative;
+      top: auto;
+      right: auto;
+      transform: translateX(-10px);
+    }
     &__sticker {
       width: 100%;
       max-width: 148px;
@@ -57,6 +95,10 @@
       position: absolute;
       top: 50%;
       transform: translate(-51%,-45%);
+      @include Screen-576 {
+        max-width: 89px;
+        margin-bottom: 44px;
+      }
     }
     &__text {
       letter-spacing: 4px;
@@ -72,6 +114,9 @@
       animation-duration: 5s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
+      @include Screen-576 {
+        width: 130px;
+      }
     }
 
     &:hover {
@@ -88,6 +133,19 @@
     letter-spacing: -4.925px;
     text-transform: lowercase;
     max-width: 855px;
+    @include Screen-1200 {
+      font-size: 151px;
+    }
+    @include Screen-992 {
+      margin-bottom: 28px;
+    }
+    @include Screen-768 {
+      font-size: 112px;
+    }
+    @include Screen-576 {
+      font-size: 58px;
+      letter-spacing: -1.45px;
+    }
   }
   &-descr {
     color: #FFF;
@@ -98,6 +156,13 @@
     letter-spacing: -0.5px;
     text-transform: lowercase;
     max-width: 270px;
+    @include Screen-992 {
+      text-align: left;
+    }
+    @include Screen-576 {
+      font-size: 16px;
+
+    }
   }
 }
 

@@ -1,9 +1,19 @@
 .footer {
   padding-bottom: 151px;
+  @include Screen-992 {
+    padding-bottom: 100px;
+  }
+  @include Screen-576 {
+    padding-bottom: 33px;
+  }
   &-wrap {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    @include Screen-576 {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
   &-hello {
     color: #FFF;
@@ -13,6 +23,16 @@
     letter-spacing: -4.925px;
     text-decoration: underline;
     text-transform: lowercase;
+    @include Screen-992 {
+      font-size: 147px;
+    }
+    @include Screen-768 {
+      font-size: 102px;
+    }
+    @include Screen-576 {
+      font-size: 64px;
+      margin-bottom: 80px;
+    }
     &:hover {
       color: #FFF;
       cursor: url(../../img/cursor-hello.png), auto;
@@ -21,6 +41,9 @@
   &-socials {
     display: flex;
     flex-direction: column;
+    @include Screen-576 {
+      flex-direction: row;
+    }
   }
   &-social {
     color: #FFF;
@@ -37,6 +60,10 @@
     }
     &:last-child {
       margin-bottom: 0;
+      margin-right: 0;
+    }
+    @include Screen-576 {
+      margin-right: 29px;
     }
   }
 }

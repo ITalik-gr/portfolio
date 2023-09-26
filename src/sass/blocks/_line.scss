@@ -17,13 +17,30 @@
     animation: scroll-text linear both;
     animation-timeline: view(block);
     animation-range: cover 0 cover 100;
+
+    @include Screen-992 {
+      font-size: 32px;
+      width: 600vw;
+    }
+    @include Screen-576 {
+      margin-bottom: 24px;
+    }
   } 
 }
 .case-line {
   margin-bottom: 157px;
+  @include Screen-992 {
+    margin-bottom: 60px;
+  }
+  @include Screen-576 {
+    margin-bottom: 37px;
+  }
 }
 .cases-line {
   margin-bottom: 120px;
+  @include Screen-576 {
+      margin-bottom: 56px;
+  }
   .line-text {
     left: -100px;
   }

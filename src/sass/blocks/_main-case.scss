@@ -3,10 +3,16 @@
   animation: show linear both;
   animation-timeline: view(block);
   animation-range: contain 60 contain 100;
+  @include Screen-992 {
+    margin-bottom: 64px;
+  }
   &__wrap {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
+    @include Screen-992 {
+      flex-direction: column;
+    }
   }
   &__text {
     display: flex;
@@ -22,6 +28,9 @@
     letter-spacing: -0.6px;
     text-transform: lowercase;
     margin-bottom: 4px;
+    @include Screen-576 {
+      font-size: 16px;
+    }
   }
   &__title {
     color: #FFF;
@@ -31,6 +40,12 @@
     letter-spacing: -2.3px;
     text-transform: lowercase;
     margin-bottom: 32px;
+    @include Screen-992 {
+      font-size: 52px;
+    }
+    @include Screen-576 {
+      font-size: 36px;
+    }
   }
   &__descr {
     color: #FFF;
@@ -40,6 +55,12 @@
     letter-spacing: -0.6px;
     text-transform: lowercase;
     max-width: 485px;
+    @include Screen-992 {
+      margin-bottom: 44px;
+    }
+    @include Screen-576 {
+      font-size: 16px;
+    }
   }
   &__block {
      
@@ -55,15 +76,32 @@
     &:hover {
       color: #00FFA3;
     }
+    @include Screen-576 {
+      font-size: 16px;
+    }
   }
 
 
   &__image {
     padding-left: 68px;
     position: relative;
+    @include Screen-1400 {
+      padding-left: 0;
+      margin-right: 20px;
+    }
+    @include Screen-992 {
+      margin-right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 26px;
+    }
     img {
       max-width: 617px;
       width: 100%;
+      @include Screen-992 {
+        max-width: 500px;
+      }
     }
 
     &--hover {
@@ -73,12 +111,14 @@
       backdrop-filter: blur(9.5px);
       position: absolute;
       top: -10px;
-      left: 10px;
       display: flex;
       justify-content: center;
       align-items: center;
       opacity: 0;
       transition: .3s all;
+      @include Screen-1200 {
+        left: -5px;
+      }
       a {
         color: #FFF;
         font-size: 92px;
@@ -87,6 +127,12 @@
         letter-spacing: -2.3px;
         text-decoration-line: underline;
         text-transform: lowercase;
+        @include Screen-1200 {
+          font-size: 62px;
+        }
+        @include Screen-576 {
+          font-size: 42px;
+        }
       }
     }
 

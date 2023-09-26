@@ -1,5 +1,11 @@
 .cases {
   margin-bottom: 295px;
+  @include Screen-768 {
+    margin-bottom: 165px;
+  }
+  @include Screen-576 {
+    margin-bottom: 105px;
+  }
   &-wrap {
     display: flex;
     flex-direction: column;
@@ -8,6 +14,13 @@
   &-item {
     position: relative;
     margin-bottom: 32px;
+    @include Screen-992 {
+      margin-bottom: 24px;
+    }
+    @include Screen-768 {
+      display: flex;
+      flex-direction: column-reverse;
+    }
     &:last-child {
       margin-bottom: 0;
     }
@@ -23,6 +36,13 @@
       &:hover {
         color: #00FFA3;
       }
+      @include Screen-992 {
+        font-size: 64px;
+      }
+      @include Screen-576 {
+        font-size: 32px;
+        letter-spacing: -0.8px;
+      }
     }
     &__type {
       color: rgba(255, 255, 255, 0.7);
@@ -35,6 +55,15 @@
       position: absolute;
       top: 0;
       right: -170px;
+      @include Screen-768 {
+        position: relative;
+        top: auto;
+        right: auto;
+      }
+      @include Screen-576 {
+        font-size: 14px;
+        letter-spacing: -0.35px;
+      }
     }
   }
 }
