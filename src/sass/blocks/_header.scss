@@ -5,18 +5,6 @@
     justify-content: space-between;
     align-items: center;
   }
-  &-logo {
-
-  }
-  &-list {
-    display: flex;
-    &__item {
-      margin-right: 60px;
-      &:last-child {
-        margin: 0;
-      }
-    }
-  }
 
   &-logo, .nav-list__item a {
     color: #FFF;
@@ -25,6 +13,24 @@
     letter-spacing: -0.5px;
     text-transform: lowercase;
   }
+  &-list {
+    display: flex;
+    &__item {
+      margin-right: 60px;
+      a {
+        transition: .3s all;
+        &:hover {
+          text-decoration: none;
+          color: rgba(255, 255, 255, 0.793);
+        }
+      }
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+
 }
 .header {
   margin: 340px 0 0 0;
@@ -35,6 +41,44 @@
     align-items: flex-end;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     padding-bottom: 55px;
+  }
+  &-block {
+    position: relative;
+  }
+  &-memoji {
+    position: absolute;
+    right: 0;
+    top: -150px;
+    border-radius: 120px;
+    &__sticker {
+      width: 100%;
+      max-width: 148px;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-51%,-45%);
+    }
+    &__text {
+      letter-spacing: 4px;
+      fill: #FFF;
+      font-size: 12.778px;
+      font-weight: 400;
+      line-height: normal;
+    }
+    
+    &__rotateText {
+      animation-name: rotate-circle;
+      animation-play-state: paused;
+      animation-duration: 5s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    &:hover {
+      .header-memoji__rotateText {
+        animation-play-state: running;
+      }
+    }
   }
   &-title {
     color: #FFF;
@@ -56,3 +100,13 @@
     max-width: 270px;
   }
 }
+
+
+
+
+@keyframes rotate-circle {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
