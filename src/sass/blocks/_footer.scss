@@ -1,4 +1,5 @@
 .footer {
+  padding-bottom: 151px;
   &-wrap {
     display: flex;
     justify-content: space-between;
@@ -14,6 +15,7 @@
     text-transform: lowercase;
     &:hover {
       color: #FFF;
+      cursor: url(../../img/cursor-hello.png), auto;
     }
   }
   &-socials {

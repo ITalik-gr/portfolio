@@ -1,5 +1,8 @@
 .main-case {
   margin-bottom: 156px;
+  animation: show linear both;
+  animation-timeline: view(block);
+  animation-range: contain 60 contain 100;
   &__wrap {
     display: flex;
     justify-content: space-between;
@@ -96,5 +99,18 @@
         color: #00FFA3; /* Змінити колір тексту посилання .main-case__link при hover на .main-case__image */
       }
     }
+  }
+}
+
+
+@keyframes show {
+  0%{
+
+  }
+  93% {
+    transform: skew(0deg, 0deg);
+  }
+  100% {
+    transform: skew(6deg, 2deg);
   }
 }
