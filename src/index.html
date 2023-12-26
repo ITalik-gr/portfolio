@@ -33,12 +33,9 @@
     <meta name="msapplication-config" content="favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@500&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body style="overflow-x: hidden;">
+<body>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTNB953P69"></script>
     <script>
@@ -137,7 +134,7 @@
                             Check now 👉
                         </a>
                     </div>
-                    <img src="img/main-case-image.png" alt="Answerly">
+                    <img decoding="async" loading="lazy" src="img/main-case-image.webp" alt="Answerly">
                 </div>
                 <div class="main-case__text">
                     <div class="main-case__block">
@@ -160,13 +157,18 @@
 
     <section class="line cases-line">
         <div class="line-text">
-            other cases + other cases + other cases + other cases + other cases + other cases + other cases + other cases + other cases + other cases + other cases + 
+            other cases + other cases + other cases + other cases + other cases + other cases + other cases + other cases +
         </div>
     </section>
 
     <section class="cases">
         <div class="container">
             <div class="cases-wrap">
+
+                <div class="cases-item">
+                    <span data-type="website" class="cases-item__type">website</span>
+                    <a href="https://ppc-psi.vercel.app/" target="_blank" class="cases-item__link">ppc.io</a>
+                </div>
 
                 <div class="cases-item">
                     <span data-type="website" class="cases-item__type">website</span>
@@ -207,6 +209,6 @@
     </footer>
 
     
-    <script src="js/script.js"></script>
+    <script defer src="js/script.js"></script>
 </body>
 </html>

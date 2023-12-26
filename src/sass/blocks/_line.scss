@@ -1,7 +1,8 @@
 
 .line {
-  position: relative;
   height: 52px;
+  width: 100%;
+  overflow: hidden;
   &-text {
     color: rgba(255, 255, 255, 0.5);
     font-size: 64px;
@@ -9,18 +10,14 @@
     line-height: 82%;
     letter-spacing: -1.6px;
     text-transform: lowercase;
-    position: absolute;
-    width: 500vw;
-    left: -50px;
-    top: 0;
-
+  
+    width: 3000px;
     animation: scroll-text linear both;
     animation-timeline: view(block);
-    animation-range: cover 0 cover 100;
-
+    animation-range: contain 0 contain 100;
     @include Screen-992 {
       font-size: 32px;
-      width: 600vw;
+      // width: 600vw;
     }
     @include Screen-576 {
       margin-bottom: 24px;
@@ -39,10 +36,7 @@
 .cases-line {
   margin-bottom: 120px;
   @include Screen-576 {
-      margin-bottom: 56px;
-  }
-  .line-text {
-    left: -100px;
+    margin-bottom: 56px;
   }
 }
 
@@ -52,6 +46,6 @@
   }
 
   100% {
-    transform: translateX(-10%);
+    transform: translateX(-15%);
   }
 }
