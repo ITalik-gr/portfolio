@@ -46,7 +46,7 @@
     }
     &__type {
       color: rgba(255, 255, 255, 0.7);
-      width: 180px;
+      width: 210px;
       font-size: 24px;
       font-weight: 500;
       line-height: normal;
@@ -54,7 +54,7 @@
       text-transform: lowercase;
       position: absolute;
       top: 0;
-      right: -170px;
+      right: -190px;
       @include Screen-768 {
         position: relative;
         top: auto;
@@ -64,6 +64,17 @@
         font-size: 14px;
         letter-spacing: -0.35px;
       }
+    }
+    &--disabled {
+      .cases-item {
+        &__link {
+          &:hover {
+            color: rgba(255, 255, 255, 0.862);
+            cursor: not-allowed;
+          }
+        }
+      }
+
     }
   }
 }

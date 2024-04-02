@@ -8,7 +8,7 @@ let casesItems = document.querySelectorAll('.cases-item');
 function hoverCasesItem(e, item) {
   let span = item.querySelector('.cases-item__type');
   if(e.type == 'mouseover') {
-    span.textContent = `check live project`
+    span.textContent = `${span.getAttribute('data-hover')}`
   } else if (e.type == 'mouseout') {
     span.textContent = `${span.getAttribute('data-type')}`
   }
