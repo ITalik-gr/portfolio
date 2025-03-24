@@ -1,5 +1,7 @@
 .cases {
   margin-bottom: 295px;
+  padding-top: 60px;
+  clip-path: inset(-100vw 0);
   @include Screen-768 {
     margin-bottom: 165px;
   }
@@ -76,5 +78,38 @@
       }
 
     }
+    &:hover {
+      .cases-item__image {
+        opacity: 1;
+        transform: rotate(2deg) translateX(0) translateY(-50%);
+        visibility: visible;
+      }
+    }
+  }
+
+  &-item__image {
+    position: absolute;
+    z-index: 3;
+    right: ac(-640px, -280px);
+    top: 40%;
+    width: ac(480px, 300px);
+    opacity: 0;
+    transform: translateX(120px) translateY(-50%);
+    visibility: hidden;
+    transition: .3s all;
+    @media (max-width: 576px) {
+      display: none;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-more {
+    color: #FFF;
+    margin-top: ac(20px, 12px);
+    font-size: ac(20px, 18px);
+    font-weight: 600;
   }
 }

@@ -39,3 +39,41 @@
     @content;
   }
 }
+
+
+
+$minWidth: 576px;
+$maxWidth: 1200px;
+
+@function strip-unit($value) {
+  @if type-of($value) == 'number' and unit($value) != "" {
+    @return $value / 1px * 1;
+  }
+  @return $value;
+}
+
+@function ac($start-size, $end-size, $min-breakpoint: $minWidth, $max-breakpoint: $maxWidth) {
+  $start-size: strip-unit($start-size);
+  $end-size: strip-unit($end-size);
+  $min-breakpoint: strip-unit($min-breakpoint);
+  $max-breakpoint: strip-unit($max-breakpoint);
+  
+  $difference: $start-size - $end-size;
+  $formula: calc(#{$end-size}px + #{$difference} * ((100vw - #{$min-breakpoint}px) / #{$max-breakpoint - $min-breakpoint}));
+
+  @if $difference > 0 {
+    @return clamp(#{$end-size}px, #{$formula}, #{$start-size}px);
+  } @else {
+    @return clamp(#{$start-size}px, #{$formula}, #{$end-size}px);
+  }
+}
+
+@function ps($max-size, $percentage) {
+    @return ($max-size * $percentage / 100) + 0px; 
+}
+
+@function ar($width, $height) {
+  $width: strip-unit($width);
+  $height: strip-unit($height);
+  @return $width / $height;
+}
