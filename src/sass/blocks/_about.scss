@@ -8,24 +8,10 @@
   }
   &-wrap {
     display: flex;
-    justify-content: space-between;
-    @include Screen-992 {
-      flex-direction: column;
-    }
-  }
-  &_br {
-    @include Screen-992 {
-      display: none;
-    }
-  }
-  &-left {
-    @include Screen-992 {
-      margin-bottom: 98px;
-    }
   }
   &-right {
     p {
-      max-width: 485px;
+      max-width: 680px;
     }
   }
   &-title {
@@ -50,7 +36,7 @@
     font-weight: 500;
     line-height: 110.5%; /* 26.52px */
     letter-spacing: -0.6px;
-    text-transform: lowercase;
+    // text-transform: lowercase;
     @include Screen-576 {
       font-size: 16px;
     }

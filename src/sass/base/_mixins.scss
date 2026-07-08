@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @mixin Screen-1400 {
   @media (max-width: 1400px) {
     //1200
@@ -47,7 +49,7 @@ $maxWidth: 1200px;
 
 @function strip-unit($value) {
   @if type-of($value) == 'number' and unit($value) != "" {
-    @return $value / 1px * 1;
+    @return math.div($value, 1px) * 1;
   }
   @return $value;
 }
@@ -69,11 +71,11 @@ $maxWidth: 1200px;
 }
 
 @function ps($max-size, $percentage) {
-    @return ($max-size * $percentage / 100) + 0px; 
+    @return math.div($max-size * $percentage, 100) + 0px;
 }
 
 @function ar($width, $height) {
   $width: strip-unit($width);
   $height: strip-unit($height);
-  @return $width / $height;
+  @return math.div($width, $height);
 }

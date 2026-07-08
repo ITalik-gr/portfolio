@@ -21,7 +21,7 @@
     }
     @include Screen-768 {
       display: flex;
-      flex-direction: column-reverse;
+      flex-direction: column;
     }
     &:last-child {
       margin-bottom: 0;
@@ -41,9 +41,27 @@
       @include Screen-992 {
         font-size: 64px;
       }
+      @include Screen-768 {
+        order: 0;
+      }
       @include Screen-576 {
         font-size: 32px;
         letter-spacing: -0.8px;
+      }
+    }
+    &__descr {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 130%;
+      letter-spacing: -0.4px;
+      max-width: 620px;
+      margin-top: 8px;
+      @include Screen-768 {
+        order: 1;
+      }
+      @include Screen-576 {
+        font-size: 14px;
       }
     }
     &__type {
@@ -61,6 +79,7 @@
         position: relative;
         top: auto;
         right: auto;
+        order: 2;
       }
       @include Screen-576 {
         font-size: 14px;
@@ -77,6 +96,14 @@
         }
       }
 
+    }
+    &--nolink {
+      .cases-item__link {
+        cursor: default;
+        &:hover {
+          color: #FFF;
+        }
+      }
     }
     &:hover {
       .cases-item__image {
