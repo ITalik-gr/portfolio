@@ -66,7 +66,7 @@
     }
     &__type {
       color: rgba(255, 255, 255, 0.7);
-      width: 210px;
+      width: 250px;
       font-size: 24px;
       font-weight: 500;
       line-height: normal;
@@ -74,7 +74,7 @@
       text-transform: lowercase;
       position: absolute;
       top: 0;
-      right: -190px;
+      right: -220px;
       @include Screen-768 {
         position: relative;
         top: auto;
