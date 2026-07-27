@@ -1,0 +1,30 @@
+[debug] [2026-07-27T14:38:01.138Z] ----------------------------------------------------------------------
+[debug] [2026-07-27T14:38:01.140Z] Command:       /Users/italik/.nvm/versions/node/v22.23.1/bin/node /usr/local/bin/firebase deploy --only hosting
+[debug] [2026-07-27T14:38:01.140Z] CLI Version:   12.3.0
+[debug] [2026-07-27T14:38:01.141Z] Platform:      darwin
+[debug] [2026-07-27T14:38:01.141Z] Node Version:  v22.23.1
+[debug] [2026-07-27T14:38:01.141Z] Time:          Mon Jul 27 2026 17:38:01 GMT+0300 (Eastern European Summer Time)
+[debug] [2026-07-27T14:38:01.141Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-07-27T14:38:01.177Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-07-27T14:38:01.177Z] > authorizing via signed-in user (italik.dev@gmail.com)
+[debug] [2026-07-27T14:38:01.177Z] [iam] checking project italik-dev for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-07-27T14:38:01.178Z] > refreshing access token with scopes: []
+[debug] [2026-07-27T14:38:01.178Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-07-27T14:38:01.178Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-07-27T14:38:01.370Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-07-27T14:38:01.370Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-07-27T14:38:01.382Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/italik-dev:testIamPermissions [none]
+[debug] [2026-07-27T14:38:01.382Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/italik-dev:testIamPermissions x-goog-quota-user=projects/italik-dev
+[debug] [2026-07-27T14:38:01.383Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/italik-dev:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-07-27T14:38:02.255Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/italik-dev:testIamPermissions 200
+[debug] [2026-07-27T14:38:02.256Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/italik-dev:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-07-27T14:38:02.257Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/italik-dev [none]
+[debug] [2026-07-27T14:38:02.698Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/italik-dev 200
+[debug] [2026-07-27T14:38:02.699Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/italik-dev {"projectId":"italik-dev","projectNumber":"825906095450","displayName":"italik-dev","name":"projects/italik-dev","resources":{"hostingSite":"italik-dev","locationId":"us-central"},"state":"ACTIVE","labels":{"firebase":"enabled"},"etag":"1_c93282b3-62c5-46f3-982e-5034db7f6cb3"}
+[info] 
+[info] === Deploying to 'italik-dev'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2026-07-27T14:38:02.703Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/italik-dev/versions [none]
+[debug] [2026-07-27T14:38:02.703Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/italik-dev/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
